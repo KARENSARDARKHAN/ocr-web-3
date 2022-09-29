@@ -92,20 +92,18 @@ body {
 }
 
 .location i {
-    height: 16px;
+    height: 22px;
+    color: #100f0f;
+    font-size: 20px;
     padding-left: 120px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .location input{
     border:none;
-    background-color: rgb(240, 236, 236);
-}
-
-.location :placeholder-shown{
-    font-size: larger;
-    font-weight: bold;
+    font-size: 20px;
     color: #100f0f;
+    background-color: rgb(240, 236, 236);
 }
 
 .intro-container {
@@ -116,7 +114,7 @@ body {
 }
 
 .intro {
-    display:flex
+    display:flex;
     justify-content:center;
     flex-direction:column;
     text-align:center;
@@ -162,7 +160,7 @@ body {
 }
 .guide-title {
     font-size: 25px;
-    margin-left: 7vw;
+    margin-left: 8vw;
 }
 
 .step {
@@ -217,25 +215,20 @@ body {
  
 .list {
     width: 100%;
-    height: 1233px;
     background-color: #f6f6f6;
 }
 
 .list-title {
-    font-size: 25px;
-    width: 53%;
-    display: inline-flex;
-    align-items: normal;
-    justify-content: center;
-    padding-left: 0.1vw;
+   font-size: 25px;
+   margin-left: 8vw;
+   
 }
 
 .card-container{
-    width: 100%;
-    height: auto;
     width: 358px;
     margin: auto;
-    cursor: pointer;
+    position: relative;
+    display: block;
 }
 
 .name-title{
@@ -250,6 +243,13 @@ body {
     width: 355px;
     margin: auto;
     text-decoration: none;
+    box-shadow: 5px 7px 11px 5px lightgrey;
+}
+
+.full-frame:hover{
+     transform: scale(1.02);
+     opacity: 0.8;
+     transition: 300ms;
 }
 
 .bottom-label {
@@ -274,23 +274,28 @@ body {
     color: #09b489;
     padding: 5px 5px 5px 5px;
     font-size: 15px;
-    position: relative;
-    top: 40px;
-    left: 320px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
 }
 
 .card-list {
-    height: 647px;
-    margin-top: -24px;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: center;
+    gap:30px;
+    padding-bottom:50px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .name-title {
     padding-left: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 307px;
-    cursor: pointer;
+    margin-bottom: 30px;
+    
 }
 .city {
     padding-left: 10px;
@@ -299,9 +304,26 @@ body {
     display: inline-block;
 }
 
-.display-flex{
-    display: flex;
-    flex-direction: row;
+.change-icon .fas{
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
+}
+
+.change-icon > .far + .fas,
+.change-icon:hover > .far {
+  display: none;
+}
+
+.change-icon:hover > .far + .fas {
+  display: inherit;
+}
+
+.position-relative{
+    font-size: 25px;
+    position: relative;
+    left: 300px;
+    bottom: 40px;
 }
 
 .footer-container {

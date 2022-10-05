@@ -2,285 +2,345 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 
-* {
-    color: #100f0f;
-    text-decoration: none;
-    list-style-type: none;
-    cursor: pointer;
-    }
+html {
+  font-family: "Roboto";
+  min-width: 325px;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
 
 body {
-    font-family: "Roboto", "calibri", "Arial", sans-serif;
-    overflow-x: hidden;
-    box-sizing: border-box; 
-    margin: 0%;
-    width: 100%;
+  margin: 0;
+  color: black;
 }
 
-.menu {
-    width: 100%;
+header {
+  position: relative;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.image-illustration{
-    object-fit: cover;
-    max-width: 100%;
+.icon {
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  color: inherit;
+  font-size: 1.2em;
 }
 
-.icon{
-    font-size: 20px;
-    width: 2%;
-    position: relative;
-    right: 90px;
-}
-.title {
-    margin: auto;
-    width: 100%;
-    height: 82px;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 5px 7px 6px black;
+.logo-title {
+  height: 30px;
 }
 
-.logo-title{
-    height: 37px;
-    font-family: "shrikhand";
-    font-size: 40px;
+main {
+  display: flex;
+  flex-direction: column;
 }
 
-.top-part {
-    width: 100%;
-    height: 250px;
+.image-illustration {
+  height: 225px;
 }
 
-.menu-list {
-    width: 100%;
-    
-    background-color: #f6f6f6;
-    border-radius: 30px 30px 0px 0px;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
+.menu-page {
+  padding: 10px 5%;
+  padding-bottom: 75px;
+  margin-top: -40px;
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  border-radius: 40px 40px 0 0;
+  z-index: 1;
+}
+
+.change-icon {
+  position: relative;
+  font-size: 25px;
+}
+
+.change-icon:hover .far.fa-heart {
+  transition-property: transform;
+  transition-duration: 200ms;
+  transition-delay: 300ms;
+  transform: scale(0);
+}
+
+.change-icon:hover .fa.fa-heart {
+  transform: scale(1)
+}
+
+.fa-heart {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.far.fa-heart {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: inherit;
+}
+
+.fa.fa-heart {
+  background: linear-gradient(to top right, #ED74DA, #9356DC);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transform: scale(0);
 }
 
 .restaurant-title {
-    display: flex;
-    align-items: center;
-    width: 90%;
-    margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
 }
 
-.restaurant-title h1 {
-    font-family: "shrikhand";
-    font-size: 27px;
-    font-weight: lighter;
-    width: 79%;
-    margin-left: 20px;
+.restaurant-title > h1 {
+  font-family: "Shrikhand";
+  font-weight: normal;
+}
+
+.restaurant-title > i {
+  font-size: 1.5em;
+}
+
+.menu-list > div {
+  margin-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menu-list > div > h3 {
+  margin: 0;
+  margin-bottom: 5px;
+  align-self: flex-start;
+}
+
+.underline {
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  align-self: flex-start;
+}
+
+.menu-list > div {
+  height: 350px;
+  position: inherit;
+  top: 0;
+  overflow: hidden; 
+}
+
+.menu-frame {
+  position: relative;
+  width: 330px;
+  height: 80px;
+  margin-top: 30px;
+  border-radius: 15px;
+  background-color: white;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  animation-name: display-menu-frame;
+  animation-duration: 250ms;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+.menu-section-title div {
+  animation-delay: 500ms;
+}
+
+.menu-section-title2   div {
+  animation-delay: 1000ms;
+}
+
+.menu-section-title3  div {
+  animation-delay: 1500ms;
+}
+
+@keyframes display-menu-frame {
+  from {
+    opacity: 0;
     margin-top: 30px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 20px;
+  }
 }
 
-.change-icon .fas{
-    color: transparent;
-    background-clip: text;
-    background: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.container-frame {
+  width: 100%;
+  padding: 8px 15px;
 }
 
-.change-icon > .far + .fas,
-.change-icon:hover > .far {
-  display: none;
+.menu-frame .data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
-.change-icon:hover > .far + .fas {
-  display: inherit;
+.menu-frame .data> div:nth-child(1) {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content:  space-around;
+  transition-property: width;
+  transition-duration: 500ms;
 }
 
-.position-relative{
-    font-size: 25px;
+.menu-frame:hover .data > div:nth-child(1) {
+  width: 220px;
 }
 
-.menu-section-title {
-    margin: auto;
-    border-bottom: 3px solid #99e2d0;
-    width: 50px;
-    line-height: 32px;
-    font-weight: normal;
-    font-size: 17px;
-}
-
-h3.menu-section-title {
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-.menu-section {
-    width: 90%;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 90px;
-}
-
-.fa-check {
-    border-radius: 50%;
-    color: #99e2d0;
-    padding: 5px;
-    background-color: white;
-    transform: rotate(0deg);
-    transition-duration: 600ms;
-}
-
-@keyframes move-inside {
-    from {
-        left: 73%;
-    }
-
-    to {
-        left: 56%;
-    }
-}
-
-.menu-element-animation{
-    height: 80px;
-    width: 80px;
-    background-color: #99e2d0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 1s;
-    transform: translateX(65px);
-    
-    position: relative;
-    left: 84%;
-    bottom: 155px;
-    
-}
-
-.menu-element:hover .menu-element-animation{
-   
-    transform: translateX(-17px);
-    transition-duration: 1s;
-}
-
-.menu-element:hover .fa-check {
-    transform: rotate(360deg);
-}
-
-.menu-element{
-    background-color: #f6f6f6;
-    width: 97%;
-    height: 60px;
-    box-shadow: 5px 7px 11px 5px lightgrey;
-    border-radius: 24px;
-    margin-bottom: 30px;
-    text-overflow: ellipsis;
-}
-
-.menu-element h4,.description{
-    padding-left: 15px;
-    line-height: 0px;
-    
-}
-
-.cost {
-    display: flex;
-    width: 20%;
-    height: 72px;
-    transform: translateX(40px);
-    transition: 1s;
-    align-items: flex-end;
-    font-family: "roboto";
-    font-weight: bold;
-    justify-content: center;
-    position: relative;
-    left: 64%;
-    bottom: 90px;
+.naming {
+  font-weight: bold;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .description {
-    width: 277px;
-    height: 50px;
-    font-size: 15px;
-    font-weight: 200;
-    display: inline-block;
-    font-family: "robotothin";
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    transition: width 1s;
-    line-height: 5px;
+  font-size: .9em;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
-
-.button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    font-weight: 500;
-    background: linear-gradient(#ff79da, #9356dc);
-    border-radius: 30px;
-    width: 40%;
-    height: 51px;
-    box-shadow: 5px 7px 11px 5px lightgrey;
-    margin: auto; 
-    margin-bottom: 50px;
-    margin-top:200px;
+.cost {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-weight: bold;
+  font-size: .9em;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.footer-container {
-    background-color: #353535;
-    height: 200px;
-    line-height: 25px;
+.menu-frame .menu-element-animation {
+  width: 65px;
+  height: 100%;
+  margin-right: -65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #99E2D0;
+  color: white;
+  font-size: 1.2em;
+  transition-property: margin;
+  transition-duration: 500ms;
+  float: right;
 }
 
-.footer-container h1 {
-    color: #ffffff;
-    font-family: "shrikhand";
-    font-size: 20px;
-    font-weight: lighter;
-    margin-left: 45px;
-    padding-top: 30px;
+.menu-frame:hover .menu-element-animation {
+  margin-right: 0px;
+}
+
+.menu-frame:hover .menu-element-animation i {
+  animation: rotate-check 500ms forwards;
+}
+
+@keyframes rotate-check {
+  from {
+    transform: rotateZ(0deg)
+  }
+  to {
+    transform: rotateZ(360deg)
+  }
+}
+
+.button {
+  height: 50px;
+  width: 225px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 1px 1px 5px grey;
+  background: linear-gradient(to bottom right, #ED74DA, #9356DC);
+  color: white;
+  font-size: 1rem;
+  align-self: center;
+}
+
+.button:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+  box-shadow: 3px 3px 5px grey;
+}
+
+footer {
+  height: 200px;
+  position: relative;
+  bottom: 0;
+  background-color: #353535;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+footer > div {
+  height: 180px;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+footer h3 {
+  margin: 0;
+  font-family: "Shrikhand";
+  font-weight: normal;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
 
 ul {
-    font-size: 18px; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.propose {
-    margin-left: 9px;
+li {
+  line-height: 2;
 }
 
-.color-style{
-  color: #ffffff;  
+li i {
+  width: 30px;
 }
 
+/* Tablette */
+@media screen and (min-width: 641px) {
+  html {
+    margin: 0 12.5%;
+    box-shadow: 0 0 30px #9356DC;
+  }
+
+  #menu-title {
+    justify-content: center;
+  }
+
+  #menu-title > h1 {
+    margin-right: 100px;
+  }
+
+  #menu-list > div > p, .dash {
+    align-self: center;
+  }
+}

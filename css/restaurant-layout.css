@@ -124,16 +124,17 @@ main {
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
+
 .menu-section-title div {
-  animation-delay: 500ms;
+  animation-delay: 1s;
 }
 
-.menu-section-title2   div {
-  animation-delay: 1000ms;
+.menu-section-title2  div {
+  animation-delay: 1.5s;
 }
 
 .menu-section-title3  div {
-  animation-delay: 1500ms;
+  animation-delay: 2s;
 }
 
 @keyframes display-menu-frame {

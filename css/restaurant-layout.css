@@ -63,42 +63,24 @@ main {
   font-size: 25px;
 }
 
-.change-icon:hover .far.fa-heart {
-  transition-property: transform;
-  transition-duration: 200ms;
-  transition-delay: 300ms;
-  transform: scale(0);
+change-icon .fas{
+    color: transparent;
+    background-clip: text;
+    background: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
+     -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.change-icon:hover .fa.fa-heart {
-  transform: scale(1)
+.change-icon > .far + .fas,
+.change-icon:hover > .far {
+  display: none;
 }
 
-.fa-heart {
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+.change-icon:hover > .far + .fas {
+  display: inherit;
 }
 
-.far.fa-heart {
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: inherit;
-}
 
-.fa.fa-heart {
-  background: linear-gradient(to top right, #ED74DA, #9356DC);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  transition-property: transform;
-  transition-duration: 500ms;
-  transform: scale(0);
-}
 
 .restaurant-title {
   display: flex;
@@ -260,50 +242,6 @@ main {
   }
 }
 
-.button {
-  height: 50px;
-  width: 225px;
-  border-radius: 25px;
-  border: none;
-  box-shadow: 1px 1px 5px grey;
-  background: linear-gradient(to bottom right, #ED74DA, #9356DC);
-  color: white;
-  font-size: 1rem;
-  align-self: center;
-}
-
-.button:hover {
-  cursor: pointer;
-  filter: brightness(110%);
-  box-shadow: 3px 3px 5px grey;
-}
-
-.footer-container {
-    background-color: #353535;
-    height: 200px;
-    line-height: 25px;
-}
-
-.footer-container h1 {
-    color: #ffffff;
-    font-family: "shrikhand";
-    font-size: 20px;
-    font-weight: lighter;
-    margin-left: 45px;
-    padding-top: 30px;
-}
-
-ul {
-    font-size: 18px; 
-}
-
-.propose {
-    margin-left: 9px;
-}
-
-.color-style{
-  color: #ffffff;  
-}
 
 li{
   list-style-type: none;

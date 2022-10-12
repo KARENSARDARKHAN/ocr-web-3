@@ -1,0 +1,26 @@
+.footer-container {
+    background-color: #353535;
+    height: 200px;
+    line-height: 25px;
+}
+
+.footer-container h1 {
+    color: #ffffff;
+    font-family: "shrikhand";
+    font-size: 20px;
+    font-weight: lighter;
+    margin-left: 45px;
+    padding-top: 30px;
+}
+
+ul {
+    font-size: 18px; 
+}
+
+.propose {
+    margin-left: 9px;
+}
+
+.color-style{
+  color: #ffffff;  
+}

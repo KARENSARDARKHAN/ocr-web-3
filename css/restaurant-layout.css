@@ -219,9 +219,9 @@ change-icon .fas{
   align-items: center;
   background-color: #99E2D0;
   color: white;
-  font-size: 1.2em;
+  font-size: 1.7em;
   transition-property: margin;
-  transition-duration: 500ms;
+  transition-duration: 2s;
   float: right;
 }
 
@@ -230,7 +230,7 @@ change-icon .fas{
 }
 
 .menu-frame:hover .menu-element-animation i {
-  animation: rotate-check 500ms forwards;
+  animation: rotate-check 2s forwards;
 }
 
 @keyframes rotate-check {

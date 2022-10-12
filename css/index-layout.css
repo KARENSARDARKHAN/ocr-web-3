@@ -284,9 +284,9 @@ body {
 .change-icon .fas{
     color: transparent;
     background-clip: text;
-    background: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
-      -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+    background: linear-gradient(to bottom, #e948d3 0%, #a742c6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .change-icon > .far + .fas,

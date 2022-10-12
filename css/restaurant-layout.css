@@ -58,16 +58,15 @@ main {
   z-index: 1;
 }
 
-.change-icon {
-  position: relative;
-  font-size: 25px;
+.change-icon .far{
+ font-size: 25px; 
 }
-
-change-icon .fas{
+.change-icon .fas{
+    font-size: 25px;
     color: transparent;
     background-clip: text;
-    background: linear-gradient(to bottom, #e72c83 0%, #a742c6 100%);
-     -webkit-background-clip: text;
+    background: linear-gradient(to bottom, #e948d3 0%, #a742c6 100%);
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -79,8 +78,6 @@ change-icon .fas{
 .change-icon:hover > .far + .fas {
   display: inherit;
 }
-
-
 
 .restaurant-title {
   display: flex;

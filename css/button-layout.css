@@ -1,23 +1,23 @@
-.button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #ffffff;
-    font-weight: bolder;
-    background: linear-gradient(#ff79da, #9356dc);
-    border-radius: 30px;
-    width: 71%;
-    height: 51px;
-    box-shadow: 5px 7px 11px 5px lightgrey;
-    margin: auto; 
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: bolder;
+  background: linear-gradient(#ff79da, #9356dc);
+  border-radius: 30px;
+  width: 71%;
+  height: 51px;
+  box-shadow: 5px 7px 11px 5px lightgrey;
+  margin: auto;
 }
 
-.button:hover{
-    transform: scale(1.02);
-    opacity: 0.8;
-    transition: 300ms;
+.button:hover {
+  transform: scale(1.02);
+  opacity: 0.8;
+  transition: 300ms;
 }
 
 .button p {
-    color: white;
+  color: white;
 }

@@ -124,16 +124,20 @@ main {
   animation-fill-mode: forwards;
 }
 
-.menu-section-title div {
+.menu-frame:nth-child(3) {
+  animation-delay: 0.50s;
+}
+
+.menu-frame:nth-child(4) {
+  animation-delay: 0.75s;
+}
+
+.menu-frame:nth-child(5) {
   animation-delay: 1s;
 }
 
-.menu-section-title.a div {
-  animation-delay: 1.5s;
-}
-
-.menu-section-title.b div {
-  animation-delay: 2s;
+.menu-frame:nth-child(6) {
+  animation-delay: 1.25s;
 }
 
 @keyframes display-menu-frame {

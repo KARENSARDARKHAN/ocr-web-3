@@ -39,21 +39,21 @@ main {
   margin-top: -40px;
   display: flex;
   flex-direction: column;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   border-radius: 40px 40px 0 0;
   z-index: 1;
 }
 
-.change-icon .far{
- font-size: 25px; 
+.change-icon .far {
+  font-size: 25px;
 }
-.change-icon .fas{
-    font-size: 25px;
-    color: transparent;
-    background-clip: text;
-    background: linear-gradient(to bottom, #e948d3 0%, #a742c6 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.change-icon .fas {
+  font-size: 25px;
+  color: transparent;
+  background-clip: text;
+  background: linear-gradient(to bottom, #e948d3 0%, #a742c6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .change-icon > .far + .fas,
@@ -97,15 +97,14 @@ main {
 .underline {
   width: 40px;
   height: 3px;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   align-self: flex-start;
 }
 
 .menu-list > div {
-  height: 350px;
   position: inherit;
   top: 0;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .menu-frame {
@@ -129,11 +128,11 @@ main {
   animation-delay: 1s;
 }
 
-.menu-section-title2  div {
+.menu-section-title.a div {
   animation-delay: 1.5s;
 }
 
-.menu-section-title3  div {
+.menu-section-title.b div {
   animation-delay: 2s;
 }
 
@@ -159,11 +158,11 @@ main {
   justify-content: space-between;
 }
 
-.menu-frame .data> div:nth-child(1) {
+.menu-frame .data > div:nth-child(1) {
   width: 280px;
   display: flex;
   flex-direction: column;
-  justify-content:  space-around;
+  justify-content: space-around;
   transition-property: width;
   transition-duration: 500ms;
 }
@@ -180,7 +179,7 @@ main {
 }
 
 .description {
-  font-size: .9em;
+  font-size: 0.9em;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -191,7 +190,7 @@ main {
   justify-content: flex-end;
   align-items: flex-end;
   font-weight: bold;
-  font-size: .9em;
+  font-size: 0.9em;
 }
 
 .menu-frame .menu-element-animation {
@@ -201,7 +200,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   color: white;
   font-size: 1.7em;
   transition-property: margin;
@@ -219,19 +218,18 @@ main {
 
 @keyframes rotate-check {
   from {
-    transform: rotateZ(0deg)
+    transform: rotateZ(0deg);
   }
   to {
-    transform: rotateZ(360deg)
+    transform: rotateZ(360deg);
   }
 }
 
-
-li{
+li {
   list-style-type: none;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -249,7 +247,8 @@ a{
     margin-right: 100px;
   }
 
-  #menu-list > div > p, .dash {
+  #menu-list > div > p,
+  .dash {
     align-self: center;
   }
 }

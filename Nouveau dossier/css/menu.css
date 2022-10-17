@@ -1,7 +1,17 @@
+html {
+  font-family: "Roboto";
+  min-width: 325px;
+}
+
 img {
   max-width: 100%;
   max-height: 100%;
   object-fit: cover;
+}
+
+body {
+  margin: 0;
+  color: black;
 }
 
 header {
@@ -12,7 +22,7 @@ header {
   align-items: center;
 }
 
-.icon {
+#back {
   position: absolute;
   left: 20px;
   top: 25px;
@@ -20,7 +30,7 @@ header {
   font-size: 1.2em;
 }
 
-.logo-title {
+#logo {
   height: 30px;
 }
 
@@ -29,17 +39,17 @@ main {
   flex-direction: column;
 }
 
-.image-illustration {
+#photo {
   height: 225px;
 }
 
-.menu-page {
+#menu {
   padding: 10px 5%;
   padding-bottom: 75px;
   margin-top: -40px;
   display: flex;
   flex-direction: column;
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
   border-radius: 40px 40px 0 0;
   z-index: 1;
 }
@@ -86,49 +96,50 @@ main {
   transform: scale(0);
 }
 
-.restaurant-title {
+#menu-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-right: 20px;
 }
 
-.restaurant-title > h1 {
+#menu-title > h1 {
   font-family: "Shrikhand";
   font-weight: normal;
 }
 
-.restaurant-title > i {
+#menu-title > i {
   font-size: 1.5em;
 }
 
-.menu-list > div {
+#menu-list > div {
   margin-bottom: 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.menu-list > div > h3 {
+#menu-list > div > p {
   margin: 0;
   margin-bottom: 5px;
   align-self: flex-start;
 }
 
-.underline {
+.dash {
   width: 40px;
   height: 3px;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   align-self: flex-start;
 }
 
-.menu-list > div {
+#menu-list > div {
+  height: 350px;
   position: inherit;
   top: 0;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
-.menu-frame {
+.elem {
   position: relative;
   width: 330px;
   height: 80px;
@@ -139,29 +150,25 @@ main {
   display: flex;
   align-items: center;
   opacity: 0;
-  animation-name: display-menu-frame;
+  animation-name: display-elem;
   animation-duration: 250ms;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
 }
 
-.menu-frame:nth-child(3) {
-  animation-delay: 0.50s;
+#starter div {
+  animation-delay: 500ms;
 }
 
-.menu-frame:nth-child(4) {
-  animation-delay: 0.75s;
+#main-course div {
+  animation-delay: 1000ms;
 }
 
-.menu-frame:nth-child(5) {
-  animation-delay: 1s;
+#dessert div {
+  animation-delay: 1500ms;
 }
 
-.menu-frame:nth-child(6) {
-  animation-delay: 1.25s;
-}
-
-@keyframes display-menu-frame {
+@keyframes display-elem {
   from {
     opacity: 0;
     margin-top: 30px;
@@ -172,96 +179,154 @@ main {
   }
 }
 
-.container-frame {
+.elem-container {
   width: 100%;
   padding: 8px 15px;
 }
 
-.menu-frame .data {
+.elem .elem-text {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.menu-frame .data > div:nth-child(1) {
+.elem .elem-text > div:nth-child(1) {
   width: 280px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content:  space-around;
   transition-property: width;
   transition-duration: 500ms;
 }
 
-.menu-frame:hover .data > div:nth-child(1) {
+.elem:hover .elem-text > div:nth-child(1) {
   width: 220px;
 }
 
-.naming {
+.elem-name {
   font-weight: bold;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.description {
-  font-size: 0.9em;
+.elem-desc {
+  font-size: .9em;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.cost {
+.elem-price {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
   font-weight: bold;
-  font-size: 0.9em;
+  font-size: .9em;
 }
 
-.menu-frame .menu-element-animation {
+.elem .elem-check {
   width: 65px;
   height: 100%;
   margin-right: -65px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #99e2d0;
+  background-color: #99E2D0;
   color: white;
-  font-size: 1.7em;
+  font-size: 1.2em;
   transition-property: margin;
   transition-duration: 500ms;
   float: right;
 }
 
-.menu-frame:hover .menu-element-animation {
+.elem:hover .elem-check {
   margin-right: 0px;
 }
 
-.menu-frame:hover .menu-element-animation i {
+.elem:hover .elem-check i {
   animation: rotate-check 500ms forwards;
 }
 
 @keyframes rotate-check {
   from {
-    transform: rotateZ(0deg);
+    transform: rotateZ(0deg)
   }
   to {
-    transform: rotateZ(360deg);
+    transform: rotateZ(360deg)
   }
+}
+
+#order-btn {
+  height: 50px;
+  width: 225px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 1px 1px 5px grey;
+  background: linear-gradient(to bottom right, #ED74DA, #9356DC);
+  color: white;
+  font-size: 1rem;
+  align-self: center;
+}
+
+#order-btn:hover {
+  cursor: pointer;
+  filter: brightness(110%);
+  box-shadow: 3px 3px 5px grey;
+}
+
+footer {
+  height: 200px;
+  position: relative;
+  bottom: 0;
+  background-color: #353535;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+footer > div {
+  height: 180px;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+footer h3 {
+  margin: 0;
+  font-family: "Shrikhand";
+  font-weight: normal;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 li {
-  list-style-type: none;
+  line-height: 2;
 }
 
-a {
-  text-decoration: none;
+li i {
+  width: 30px;
 }
 
-@media screen and (min-width: 768px) {
+/* Tablette */
+@media screen and (min-width: 641px) {
   html {
     margin: 0 12.5%;
-    box-shadow: 0 0 30px lightgrey;
+    box-shadow: 0 0 30px #9356DC;
   }
 
   #menu-title {
@@ -272,8 +337,7 @@ a {
     margin-right: 100px;
   }
 
-  #menu-list > div > p,
-  .dash {
+  #menu-list > div > p, .dash {
     align-self: center;
   }
 }

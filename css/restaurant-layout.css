@@ -44,25 +44,46 @@ main {
   z-index: 1;
 }
 
-.change-icon .far {
+.heart {
+  position: relative;
   font-size: 25px;
 }
-.change-icon .fas {
-  font-size: 25px;
-  color: transparent;
-  background-clip: text;
-  background: linear-gradient(to bottom, #e948d3 0%, #a742c6 100%);
+
+.heart:hover .far.fa-heart {
+  transition-property: transform;
+  transition-duration: 200ms;
+  transition-delay: 300ms;
+  transform: scale(0);
+}
+
+.heart:hover .fa.fa-heart {
+  transform: scale(1)
+}
+
+.fa-heart {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.far.fa-heart {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: inherit;
+}
+
+.fa.fa-heart {
+  background: linear-gradient(to top right, #ED74DA, #9356DC);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.change-icon > .far + .fas,
-.change-icon:hover > .far {
-  display: none;
-}
-
-.change-icon:hover > .far + .fas {
-  display: inherit;
+  background-clip: text;
+  color: transparent;
+  transition-property: transform;
+  transition-duration: 500ms;
+  transform: scale(0);
 }
 
 .restaurant-title {
@@ -208,7 +229,7 @@ main {
   color: white;
   font-size: 1.7em;
   transition-property: margin;
-  transition-duration: 2s;
+  transition-duration: 500ms;
   float: right;
 }
 
@@ -217,7 +238,7 @@ main {
 }
 
 .menu-frame:hover .menu-element-animation i {
-  animation: rotate-check 2s forwards;
+  animation: rotate-check 500ms forwards;
 }
 
 @keyframes rotate-check {

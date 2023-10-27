@@ -7,3 +7,5 @@ Assurer la cohérence graphique d'un site web
 Mettre en place son environnement Front-End
 Mettre en place une structure de navigation pour un site web
 Utiliser un système de gestion de versions pour le suivi du projet et son hébergement
+
+The website is visible at this URL : https://github.com/KARENSARDARKHAN/ocr-web-3.git
